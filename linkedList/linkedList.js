@@ -1,5 +1,6 @@
 //10--->16--->20
 
+
 // let linkedList={
 //     head:{
 //         value:10,
@@ -100,6 +101,7 @@ this.head=first
 printList() {
     const values = [];
     let currentNode = this.head;
+
     while (currentNode !== null) {
       values.push(currentNode.value);
       currentNode = currentNode.next;
@@ -111,13 +113,30 @@ printList() {
 
 
 
-linkedList= new linkedList(10)
-linkedList.append(20)
-linkedList.prepend(5)
-linkedList.insert(2,15)
-linkedList.delete(2)
-linkedList.reverse()
+linkedList= new linkedList(16)
+console.log("----initail Linked List----")
+linkedList.printList()
 
+
+linkedList.append(10)
+console.log("----Append Data----")
+linkedList.printList()
+
+
+linkedList.prepend(20)
+console.log("----Prepend Data----")
+linkedList.printList()
+
+linkedList.insert(2,15)
+console.log("----inserting Data----")
+linkedList.printList()
+
+linkedList.delete(2)
+console.log("----Delete Data LinkList----")
+linkedList.printList()
+
+linkedList.reverse()
+console.log("----Reverse LinkList----")
+linkedList.printList()
 
 console.log(linkedList)
-linkedList.printList()
